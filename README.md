@@ -7,6 +7,7 @@ In order to create it through c++ the classes that could be integrated could be 
 
 
 
+![Diagrama drawio](https://github.com/user-attachments/assets/742e2bc2-0023-4b5e-8382-b035795bf39c)
 
 
  
