@@ -5,6 +5,8 @@ Each correct answer grants points, while incorrect answers can subtract points. 
 The purpose of the game is whoever has the most points wins.
 In order to create it through c++ the classes that could be integrated could be 1. Question 2. Player 3. Game 4. Timer 5.Answer
 
+Diagram with all the classes, objects, attributes, methods and relationships:
+
 
 
 ![Diagrama drawio](https://github.com/user-attachments/assets/742e2bc2-0023-4b5e-8382-b035795bf39c)
