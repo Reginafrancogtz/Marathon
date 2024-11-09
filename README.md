@@ -6,7 +6,7 @@ The purpose of the game is whoever has the most points wins.
 In order to create it through c++ the classes that could be integrated could be 1. Question 2. Player 3. Game 4. Timer 5.Answer
 
 
-![image](https://github.com/user-attachments/assets/378bcd7f-b1d1-4683-b9f9-7da0872ab5c2) 
+
 
 
  
