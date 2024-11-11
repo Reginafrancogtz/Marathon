@@ -1,6 +1,6 @@
 #include "Answer.h"
 
-Answer::Answer(const std::string &t, bool correct) : text(t), isCorrect(correct) {}
+Answer::Answer(std::string t, bool correct) : text(t), isCorrect(correct) {}
 
 std::string Answer::getText() { return ""; }
 
