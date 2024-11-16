@@ -6,7 +6,7 @@ std::string Player::getName() const {
     return name;
 }
 
-void Player::setName(const std::string& newName) {
+void Player::setName(std::string newName) {  
     name = newName;
 }
 
