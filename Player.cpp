@@ -1,9 +1,23 @@
 #include "Player.h"
 
-Player::Player(const std::string &n) : name(n), score(0) {}
+Player::Player(std::string playerName) : name(playerName), score(0) {}
 
-std::string Player::getName() { return ""; }
+std::string Player::getName() const {
+    return name;
+}
 
-void Player::updateScore(int points) {}
+void Player::setName(const std::string& newName) {
+    name = newName;
+}
 
-int Player::getScore() const { return 0; }
+int Player::getScore() const {
+    return score;
+}
+
+void Player::setScore(int newScore) {
+    score = newScore;
+}
+
+void Player::updateScore(int points) {
+    score += points;
+}
