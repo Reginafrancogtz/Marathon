@@ -5,16 +5,28 @@
 #include <vector>
 
 class Question {
-private:
+protected:
     std::string text;
+    std::string topic;
     std::vector<std::string> options;
     int correctAnswer;
 
 public:
-    Question(const std::string &t, const std::vector<std::string> &opts, int correct);
+    Question(std::string qText, std::string qTopic, std::vector<std::string> qOptions, int correctAns);
+    virtual void displayQuestion() const;
+    virtual bool checkAnswer(int answer) const;
 
-    void displayQuestion();
-    bool checkAnswer(int answer);
+    std::string getText() const;
+    void setText(const std::string& newText);
+
+    std::string getTopic() const;
+    void setTopic(const std::string& newTopic);
+
+    std::vector<std::string> getOptions() const;
+    void setOptions(const std::vector<std::string>& newOptions);
+
+    int getCorrectAnswer() const;
+    void setCorrectAnswer(int newCorrectAnswer);
 };
 
 #endif
