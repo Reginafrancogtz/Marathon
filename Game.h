@@ -19,7 +19,7 @@ public:
     void startGame();
     void displayQuestion(int index) const;
 
-    void setPlayer(const Player& newPlayer);
+    void setPlayer(Player newPlayer); 
     Question* getQuestion(int index) const;
 };
 
