@@ -9,9 +9,37 @@ Developing such a game in C++ is not only a great exercise to improve programmin
 ![Diagrama final drawio](https://github.com/user-attachments/assets/5416d6d6-5f4b-4a4c-989b-9a5cc960ff0b)
 
 EXPLANATION OF EACH CLASS 
- 1. Game
- 2. Player
- 3. Question
- 4. Music Question
- 5. History Question 
+1. Game
+Description:
+Represents the main logic of the game, integrating the player and managing the questions. It contains methods to start the game, display questions, and control the overall flow.
+Justification:
+This class acts as the game controller, ensuring that interactions between the player and the questions occur in an orderly manner.
+2. Player
+Description:
+Represents a player in the game, keeping track of their name and score.
+Justification:
+Defines and organizes the player’s basic information, allowing progress tracking during the game.
+3. Question
+Description:
+An abstract base class representing generic questions with text, options, and a correct answer.
+Justification:
+Provides a general structure for questions, from which specific question types (music and history) can be derived.
+4. Music Question
+Description:
+A subclass of Question that represents music-related questions, including specific information such as artist, album, and genre.
+Justification:
+Adds specific attributes and functionality for music-related questions, extending the generic Question class.
+6. History Question
+Description:
+A subclass of Question that represents history-related questions about periods and events.
+Justification:
+Extends the Question class, adding historical details to create specific history-related questions.
+
+RELATION BETWEEN CLASES 
+1.	Association between Game and Player: The game requires a player to function, managing their progress and score.
+2.	Aggregation between Game and Question: Game uses questions (both music and history) to interact with the player.
+3.	Inheritance: MusicQuestion and HistoryQuestion extend Question, reusing its basic structure while adding specific attributes.
+
+
+
  
