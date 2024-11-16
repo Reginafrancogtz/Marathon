@@ -11,7 +11,7 @@
 class Game {
 private:
     Player player;
-    std::vector<Question*> questions; // Contenedor para preguntas (de cualquier tipo).
+    std::vector<Question*> questions; 
 
 public:
     Game(std::string playerName, int numQuestions);
