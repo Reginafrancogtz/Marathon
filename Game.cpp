@@ -3,7 +3,7 @@
 
 Game::Game(std::string playerName, int numQuestions)
     : player(playerName) {
-    // Inicializar preguntas (ejemplo básico)
+    
     questions.push_back(new MusicQuestion(
         "Who is known as the King of Pop?",
         "Music",
@@ -17,7 +17,6 @@ Game::Game(std::string playerName, int numQuestions)
         3, "1940s", "End of WWII"
     ));
 
-    // Solo para demostración: si hay más preguntas, podrías agregarlas dinámicamente.
     if (numQuestions > 2) {
         for (int i = 2; i < numQuestions; ++i) {
             questions.push_back(new Question(
@@ -40,7 +39,7 @@ void Game::startGame() {
 
         if (questions[i]->checkAnswer(answer)) {
             std::cout << "Correct!" << std::endl;
-            player.updateScore(10); // Incrementar puntaje.
+            player.updateScore(10); 
         } else {
             std::cout << "Wrong! The correct answer was option " << questions[i]->getCorrectAnswer() << std::endl;
         }
@@ -57,7 +56,7 @@ void Game::displayQuestion(int index) const {
     }
 }
 
-void Game::setPlayer(const Player& newPlayer) {
+void Game::setPlayer(Player newPlayer) { 
     player = newPlayer;
 }
 
