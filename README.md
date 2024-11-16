@@ -4,7 +4,8 @@ The Marathon game is a type of interactive game where participants must answer a
 Developing such a game in C++ is not only a great exercise to improve programming skills, but it also turns out to be a fun and dynamic experience. The interaction with the player, the possibility of adding custom difficulty levels or categories, and real-time competition can make the game very entertaining. In addition, it is a project that can be expanded and improved in various ways. For all these reasons, a Questions and Answers Marathon game not only represents a technical challenge in C++, but also an opportunity to create an interactive product that can offer hours of fun to players and, at the same time, be an educational project that covers programming logic.
 
 
-![Diagrama drawio](https://github.com/user-attachments/assets/742e2bc2-0023-4b5e-8382-b035795bf39c)
+![Diagrama de clases drawio](https://github.com/user-attachments/assets/2b11c6e6-0a30-4961-9849-ae6afd64f9df)
+
 
 
  
