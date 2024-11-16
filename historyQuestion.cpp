@@ -18,7 +18,7 @@ std::string HistoryQuestion::getPeriod() const {
     return period;
 }
 
-void HistoryQuestion::setPeriod(const std::string& newPeriod) {
+void HistoryQuestion::setPeriod(std::string newPeriod) {  
     period = newPeriod;
 }
 
@@ -26,6 +26,6 @@ std::string HistoryQuestion::getEvent() const {
     return event;
 }
 
-void HistoryQuestion::setEvent(const std::string& newEvent) {
+void HistoryQuestion::setEvent(std::string newEvent) {  
     event = newEvent;
 }
