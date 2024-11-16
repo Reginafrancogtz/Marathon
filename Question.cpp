@@ -19,7 +19,7 @@ std::string Question::getText() const {
     return text;
 }
 
-void Question::setText(const std::string& newText) {
+void Question::setText(std::string newText) {  
     text = newText;
 }
 
@@ -27,7 +27,7 @@ std::string Question::getTopic() const {
     return topic;
 }
 
-void Question::setTopic(const std::string& newTopic) {
+void Question::setTopic(std::string newTopic) {  
     topic = newTopic;
 }
 
@@ -35,7 +35,7 @@ std::vector<std::string> Question::getOptions() const {
     return options;
 }
 
-void Question::setOptions(const std::vector<std::string>& newOptions) {
+void Question::setOptions(std::vector<std::string> newOptions) {  
     options = newOptions;
 }
 
