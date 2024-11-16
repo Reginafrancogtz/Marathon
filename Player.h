@@ -9,11 +9,12 @@ private:
     int score;
 
 public:
-    Player(const std::string &n);
-
-    std::string getName();
-    void updateScore(int points);
+    Player(std::string playerName);
+    std::string getName() const;
+    void setName(const std::string& newName);
     int getScore() const;
+    void setScore(int newScore);
+    void updateScore(int points);
 };
 
 #endif
