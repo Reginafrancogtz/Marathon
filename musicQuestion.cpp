@@ -18,7 +18,7 @@ std::string MusicQuestion::getArtist() const {
     return artist;
 }
 
-void MusicQuestion::setArtist(const std::string& newArtist) {
+void MusicQuestion::setArtist(std::string newArtist) { 
     artist = newArtist;
 }
 
@@ -26,7 +26,7 @@ std::string MusicQuestion::getAlbum() const {
     return album;
 }
 
-void MusicQuestion::setAlbum(const std::string& newAlbum) {
+void MusicQuestion::setAlbum(std::string newAlbum) {  
     album = newAlbum;
 }
 
@@ -34,6 +34,7 @@ std::string MusicQuestion::getGenre() const {
     return genre;
 }
 
-void MusicQuestion::setGenre(const std::string& newGenre) {
+void MusicQuestion::setGenre(std::string newGenre) {  
     genre = newGenre;
 }
+
