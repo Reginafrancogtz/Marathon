@@ -3,21 +3,24 @@
 
 #include <string>
 #include <vector>
-#include "Question.h"
 #include "Player.h"
+#include "Question.h"
+#include "MusicQuestion.h"
+#include "HistoryQuestion.h"
 
 class Game {
 private:
-    std::string gameName;
-    std::vector<Question> questions;
     Player player;
+    std::vector<Question*> questions; // Contenedor para preguntas (de cualquier tipo).
 
 public:
-    Game(const std::string &gName, const std::string &pName);
+    Game(std::string playerName, int numQuestions);
 
-    void addQuestion(const Question &q);
     void startGame();
-    void displayLeaderboard();
+    void displayQuestion(int index) const;
+
+    void setPlayer(const Player& newPlayer);
+    Question* getQuestion(int index) const;
 };
 
 #endif
