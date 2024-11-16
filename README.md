@@ -8,5 +8,10 @@ Developing such a game in C++ is not only a great exercise to improve programmin
 
 ![Diagrama final drawio](https://github.com/user-attachments/assets/5416d6d6-5f4b-4a4c-989b-9a5cc960ff0b)
 
-
+EXPLANATION OF EACH CLASS 
+ 1. Game
+ 2. Player
+ 3. Question
+ 4. Music Question
+ 5. History Question 
  
