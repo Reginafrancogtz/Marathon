@@ -1,26 +1,33 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <string>
-#include <vector>
 #include "Player.h"
-#include "Question.h"
 #include "MusicQuestion.h"
 #include "HistoryQuestion.h"
 
+// Clase principal que controla el flujo del juego
 class Game {
 private:
-    Player player;
-    std::vector<Question*> questions; 
+    Player player;             
+    MusicQuestion musicQuestion; 
+    HistoryQuestion historyQuestion; 
 
 public:
-    Game(std::string playerName, int numQuestions);
+    // Constructor que inicializa el juego con un jugador y preguntas
+    Game(Player player, MusicQuestion musicQuestion, HistoryQuestion historyQuestion);
 
+    // Método para iniciar el juego
     void startGame();
-    void displayQuestion(int index) const;
 
-    void setPlayer(Player newPlayer); 
-    Question* getQuestion(int index) const;
+    // Método para mostrar preguntas en general
+    void displayQuestion();
+
+    // Métodos para jugar preguntas específicas
+    void playMusicQuestion();
+    void playHistoryQuestion();
+
+    // Método para establecer un nuevo jugador
+    void setPlayer(Player player);
 };
 
 #endif
