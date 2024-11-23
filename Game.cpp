@@ -1,68 +1,36 @@
 #include "Game.h"
 #include <iostream>
 
-Game::Game(std::string playerName, int numQuestions)
-    : player(playerName) {
-    
-    questions.push_back(new MusicQuestion(
-        "Who is known as the King of Pop?",
-        "Music",
-        {"Michael Jackson", "Prince", "Elvis Presley", "Madonna"},
-        1, "Michael Jackson", "Thriller", "Pop"
-    ));
-    questions.push_back(new HistoryQuestion(
-        "When did World War II end?",
-        "History",
-        {"1940", "1942", "1945", "1950"},
-        3, "1940s", "End of WWII"
-    ));
+// Constructor de la clase Game
+Game::Game(Player player, MusicQuestion musicQuestion, HistoryQuestion historyQuestion)
+    : player(player), musicQuestion(musicQuestion), historyQuestion(historyQuestion) {}
 
-    if (numQuestions > 2) {
-        for (int i = 2; i < numQuestions; ++i) {
-            questions.push_back(new Question(
-                "Placeholder question?", "General",
-                {"Option 1", "Option 2", "Option 3", "Option 4"}, 1
-            ));
-        }
-    }
-}
-
+// Inicia el juego mostrando un mensaje de bienvenida
 void Game::startGame() {
-    std::cout << "Starting game for player: " << player.getName() << std::endl;
-
-    for (size_t i = 0; i < questions.size(); ++i) {
-        displayQuestion(i);
-
-        std::cout << "Your answer: ";
-        int answer;
-        std::cin >> answer;
-
-        if (questions[i]->checkAnswer(answer)) {
-            std::cout << "Correct!" << std::endl;
-            player.updateScore(10); 
-        } else {
-            std::cout << "Wrong! The correct answer was option " << questions[i]->getCorrectAnswer() << std::endl;
-        }
-    }
-
-    std::cout << "Game Over! Your final score is: " << player.getScore() << std::endl;
+    std::cout << "Welcome, " << player.getName() << "!\nLet's begin the Marathon Game!\n";
+    displayQuestion();
 }
 
-void Game::displayQuestion(int index) const {
-    if (index >= 0 && index < static_cast<int>(questions.size())) {
-        questions[index]->displayQuestion();
-    } else {
-        std::cerr << "Invalid question index!" << std::endl;
-    }
+// Muestra las preguntas al jugador
+void Game::displayQuestion() {
+    std::cout << "Here are your questions:\n";
+    musicQuestion.displayQuestion();
+    historyQuestion.displayQuestion();
 }
 
-void Game::setPlayer(Player newPlayer) { 
-    player = newPlayer;
+// Lógica para responder preguntas de música
+void Game::playMusicQuestion() {
+    musicQuestion.displayQuestion();
+    // Aquí iría la lógica para capturar y verificar la respuesta
 }
 
-Question* Game::getQuestion(int index) const {
-    if (index >= 0 && index < static_cast<int>(questions.size())) {
-        return questions[index];
-    }
-    return nullptr;
+// Lógica para responder preguntas de historia
+void Game::playHistoryQuestion() {
+    historyQuestion.displayQuestion();
+    // Aquí iría la lógica para capturar y verificar la respuesta
+}
+
+// Establece un nuevo jugador en el juego
+void Game::setPlayer(Player player) {
+    this->player = player;
 }
