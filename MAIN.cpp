@@ -3,7 +3,7 @@
 #include "MusicQuestion.h"
 #include "HistoryQuestion.h"
 #include "Game.h"
-#include "Question.h"  // Incluir la clase base Question
+#include "Question.h"  
 
 int main() {
     // Crear un jugador
