@@ -51,6 +51,7 @@ The Game class is central to the system, coordinating all gameplay elements. It 
 Its scalability ensures that new question categories can be integrated seamlessly, making it a flexible and reusable component of the system.
 
 Class: Player
+
 Purpose:
 
 Represents the player, storing their name and score, and allowing the game to track their progress and performance.
@@ -60,6 +61,7 @@ The Player class personalizes the game by storing the player’s name and keepin
 It is a fundamental element of the game, as it ensures player progression can be managed and displayed effectively.
 
 Class: Game
+
 Purpose:
 
 Serves as the main controller of the game, managing the interaction between the player and the questions and ensuring the game progresses smoothly.
@@ -69,6 +71,7 @@ The Game class is central to the system, coordinating all gameplay elements. It 
 Its scalability ensures that new question categories can be integrated seamlessly, making it a flexible and reusable component of the system.
 
 Class: Player
+
 Purpose:
 
 Represents the player, storing their name and score, and allowing the game to track their progress and performance.
@@ -78,6 +81,7 @@ The Player class personalizes the game by storing the player’s name and keepin
 It is a fundamental element of the game, as it ensures player progression can be managed and displayed effectively.
 
 Class: Question (base class)
+
 Purpose:
 
 Provides the foundational structure for all question types, including attributes for the question text, topic, options, and the correct answer.
@@ -87,6 +91,7 @@ The Question class centralizes shared logic, reducing redundancy and ensuring co
 By serving as a base class, it supports specialization through inheritance, enabling the creation of more complex and diverse question types (MusicQuestion, HistoryQuestion) while maintaining a clean and modular design.
 
 Class: MusicQuestion (inherits from Question)
+
 Purpose:
 
 Extends Question to include music-specific details such as artist, album, and genre, enhancing the thematic scope of the game.
@@ -96,6 +101,7 @@ The MusicQuestion class adds depth to the gameplay by introducing attributes and
 Its modularity ensures the game remains flexible and can easily incorporate other specialized question types in the future.
 
 Class: HistoryQuestion (inherits from Question)
+
 Purpose:
 
 Extends Question to include historical context through attributes like period and event, enabling questions about key moments in history.
