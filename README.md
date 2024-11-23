@@ -42,7 +42,7 @@ A Marathon game is not typically used for tasks that require complex, real-time 
 **CLASS DESCRIPTION:**
 
 
-**HOW IS IT USED?**
+**HOW IS IT EXPECTED TO BE USED**
 1. Create your player profile:
 When the game starts, you’ll be asked to enter your name.
 You’ll begin with an initial score of 0 points.
