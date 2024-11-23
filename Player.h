@@ -3,25 +3,25 @@
 
 #include <string>
 
-// Clase que representa al jugador del juego
+// Class that represents the player in the game
 class Player {
 private:
-    std::string name; 
-    int score;       
+    std::string name; // The player's name
+    int score;        // The player's score
 
 public:
-    // Constructor que inicializa el nombre y la puntuación del jugador
+    // Constructor that initializes the player's name and score
     Player(std::string name = "", int score = 0);
 
-    // Métodos para obtener y establecer el nombre del jugador
+    // Methods to get and set the player's name
     std::string getName() const;
     void setName(std::string name);
 
-    // Métodos para obtener y establecer la puntuación del jugador
+    // Methods to get and set the player's score
     int getScore() const;
     void setScore(int score);
 
-    // Método para actualizar la puntuación añadiendo puntos
+    // Method to update the score by adding points
     void updateScore(int points);
 };
 
