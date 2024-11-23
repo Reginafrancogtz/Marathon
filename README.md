@@ -1,6 +1,7 @@
 #MARATHON
 
 **WHAT IS IT?**
+
 A Marathon game is an interactive activity where participants answer a series of questions, usually related to a specific topic or general knowledge. These questions can be organized by difficulty levels and presented in various formats, such as multiple choice, true or false, fill-in-the-blank, or open-ended responses.
 The game can be designed for individual play, group participation, or competitive modes. Often, it includes mechanisms to track scores, set time limits for answering, or incorporate features like rewards or level unlocking to make it more dynamic and engaging.
 
