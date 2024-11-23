@@ -3,26 +3,26 @@
 
 #include "Question.h"
 
-// Clase que representa una pregunta sobre historia
+// Class that represents a history-related question
 class HistoryQuestion : public Question {
 private:
     std::string period; 
     std::string event; 
 
 public:
-    // Constructor que inicializa los atributos específicos de HistoryQuestion
+    // Constructor that initializes the specific attributes of HistoryQuestion
     HistoryQuestion(std::string text = "", std::string topic = "", std::vector<std::string> options = {}, int correctAnswer = -1,
                     std::string period = "", std::string event = "");
 
-    // Métodos para obtener y establecer el período histórico
+    // Methods to get and set the historical period
     std::string getPeriod() const;
     void setPeriod(std::string period);
 
-    // Métodos para obtener y establecer el evento histórico
+    // Methods to get and set the historical event
     std::string getEvent() const;
     void setEvent(std::string event);
 
-    // Sobrescribe el método para mostrar la pregunta, incluyendo detalles históricos
+    // Overrides the method to display the question, including historical details
     void displayQuestion() const override;
 };
 
