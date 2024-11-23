@@ -1,48 +1,60 @@
 #include "Question.h"
 #include <iostream>
 
-Question::Question(std::string qText, std::string qTopic, std::vector<std::string> qOptions, int correctAns)
-    : text(qText), topic(qTopic), options(qOptions), correctAnswer(correctAns) {}
+// Constructor de la clase Question
+Question::Question(std::string text, std::string topic, std::vector<std::string> options, int correctAnswer)
+    : text(text), topic(topic), options(options), correctAnswer(correctAnswer) {}
 
-void Question::displayQuestion() const {
-    std::cout << "Question: " << text << std::endl;
-    for (size_t i = 0; i < options.size(); ++i) {
-        std::cout << i + 1 << ". " << options[i] << std::endl;
-    }
-}
-
-bool Question::checkAnswer(int answer) const {
-    return answer == correctAnswer;
-}
-
+// Retorna el texto de la pregunta
 std::string Question::getText() const {
     return text;
 }
 
-void Question::setText(std::string newText) {  
-    text = newText;
+// Establece el texto de la pregunta
+void Question::setText(std::string text) {
+    this->text = text;
 }
 
+// Retorna el tema de la pregunta
 std::string Question::getTopic() const {
     return topic;
 }
 
-void Question::setTopic(std::string newTopic) {  
-    topic = newTopic;
+// Establece el tema de la pregunta
+void Question::setTopic(std::string topic) {
+    this->topic = topic;
 }
 
+// Retorna las opciones de respuesta
 std::vector<std::string> Question::getOptions() const {
     return options;
 }
 
-void Question::setOptions(std::vector<std::string> newOptions) {  
-    options = newOptions;
+// Establece las opciones de respuesta
+void Question::setOptions(std::vector<std::string> options) {
+    this->options = options;
 }
 
+// Retorna el índice de la respuesta correcta
 int Question::getCorrectAnswer() const {
     return correctAnswer;
 }
 
-void Question::setCorrectAnswer(int newCorrectAnswer) {
-    correctAnswer = newCorrectAnswer;
+// Establece el índice de la respuesta correcta
+void Question::setCorrectAnswer(int correctAnswer) {
+    this->correctAnswer = correctAnswer;
 }
+
+// Verifica si el índice proporcionado es correcto
+bool Question::checkAnswer(int answerIndex) const {
+    return answerIndex == correctAnswer;
+}
+
+// Muestra la pregunta y sus opciones
+void Question::displayQuestion() const {
+    std::cout << "Topic: " << topic << "\nQuestion: " << text << "\nOptions:\n";
+    for (size_t i = 0; i < options.size(); ++i) {
+        std::cout << i + 1 << ". " << options[i] << "\n";
+    }
+}
+
