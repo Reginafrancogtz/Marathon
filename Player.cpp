@@ -1,23 +1,29 @@
 #include "Player.h"
 
-Player::Player(std::string playerName) : name(playerName), score(0) {}
+// Constructor de la clase Player
+Player::Player(std::string name, int score) : name(name), score(score) {}
 
+// Retorna el nombre del jugador
 std::string Player::getName() const {
     return name;
 }
 
-void Player::setName(std::string newName) {  
-    name = newName;
+// Establece el nombre del jugador
+void Player::setName(std::string name) {
+    this->name = name;
 }
 
+// Retorna la puntuación del jugador
 int Player::getScore() const {
     return score;
 }
 
-void Player::setScore(int newScore) {
-    score = newScore;
+// Establece la puntuación del jugador
+void Player::setScore(int score) {
+    this->score = score;
 }
 
+// Incrementa la puntuación del jugador en la cantidad indicada
 void Player::updateScore(int points) {
     score += points;
 }
