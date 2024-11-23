@@ -63,28 +63,6 @@ Justification:
 The Player class personalizes the game by storing the player’s name and keeping track of their score. This is critical for evaluating performance and providing motivation to the player.
 It is a fundamental element of the game, as it ensures player progression can be managed and displayed effectively.
 
-Class: Game
-
-Purpose:
-
-Serves as the main controller of the game, managing the interaction between the player and the questions and ensuring the game progresses smoothly.
-
-Justification:
-
-The Game class is central to the system, coordinating all gameplay elements. It handles starting the game, presenting questions, and managing the flow between music and history categories.
-Its scalability ensures that new question categories can be integrated seamlessly, making it a flexible and reusable component of the system.
-
-Class: Player
-
-Purpose:
-
-Represents the player, storing their name and score, and allowing the game to track their progress and performance.
-
-Justification:
-
-The Player class personalizes the game by storing the player’s name and keeping track of their score. This is critical for evaluating performance and providing motivation to the player.
-It is a fundamental element of the game, as it ensures player progression can be managed and displayed effectively.
-
 Class: Question (base class)
 
 Purpose:
