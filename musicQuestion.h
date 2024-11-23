@@ -3,7 +3,7 @@
 
 #include "Question.h"
 
-// Clase que representa una pregunta sobre música
+// Class that represents a music-related question
 class MusicQuestion : public Question {
 private:
     std::string artist; 
@@ -11,26 +11,26 @@ private:
     std::string genre;  
 
 public:
-    // Constructor que inicializa los atributos específicos de MusicQuestion
+    // Constructor that initializes the specific attributes of MusicQuestion
     MusicQuestion(std::string text = "", std::string topic = "", std::vector<std::string> options = {}, int correctAnswer = -1,
                   std::string artist = "", std::string album = "", std::string genre = "");
 
-    // Métodos para obtener y establecer el artista
+    // Methods to get and set the artist
     std::string getArtist() const;
     void setArtist(std::string artist);
 
-    // Métodos para obtener y establecer el álbum
+    // Methods to get and set the album
     std::string getAlbum() const;
     void setAlbum(std::string album);
 
-    // Métodos para obtener y establecer el género musical
+    // Methods to get and set the music genre
     std::string getGenre() const;
     void setGenre(std::string genre);
 
-    // Muestra pistas relacionadas con la pregunta (artista, álbum, género)
+    // Displays hints related to the question (artist, album, genre)
     void displayHints() const;
 
-    // Sobrescribe el método para mostrar la pregunta, incluyendo las pistas
+    // Overrides the method to display the question, including the hints
     void displayQuestion() const override;
 };
 
