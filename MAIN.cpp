@@ -3,130 +3,130 @@
 #include "MusicQuestion.h"
 #include "HistoryQuestion.h"
 #include "Game.h"
-#include "Question.h"  // Include the base Question class header
+#include "Question.h"  // Incluir la clase base Question
 
 int main() {
-    // Create a player
+    // Crear un jugador
     std::string playerName;
     std::cout << "Enter player name: ";
     std::getline(std::cin, playerName);
     
-    Player player(playerName, 0);  // Player starts with a score of 0
+    Player player(playerName, 0);  // El jugador comienza con una puntuación de 0
 
-    // Music Questions
-    std::vector<std::string> musicOptions1 = {"Artist A", "Artist B", "Artist C", "Artist D"};
+    // Preguntas de música
+    std::vector<std::string> musicOptions1 = {"Adele", "Beyoncé", "Taylor Swift", "Ed Sheeran"};
     MusicQuestion musicQ1(
-        "Who is the artist of the album 'Album Name'?", 
+        "Who is the artist of the album '25'?", 
         "Music", 
         musicOptions1, 
-        1,  // Assume the correct answer is option 1
-        "Artist B", 
-        "Album Name", 
+        0,  // Respuesta correcta es la opción 1 (Adele)
+        "Adele", 
+        "25", 
         "Pop"
     );
 
-    std::vector<std::string> musicOptions2 = {"Artist E", "Artist F", "Artist G", "Artist H"};
+    std::vector<std::string> musicOptions2 = {"The Beatles", "Led Zeppelin", "Queen", "Pink Floyd"};
     MusicQuestion musicQ2(
-        "Which artist released the song 'Song X'?", 
+        "Which band released the album 'Abbey Road'?", 
         "Music", 
         musicOptions2, 
-        2, 
-        "Artist F", 
-        "Album Z", 
+        0, 
+        "The Beatles", 
+        "Abbey Road", 
         "Rock"
     );
 
-    std::vector<std::string> musicOptions3 = {"Artist I", "Artist J", "Artist K", "Artist L"};
+    std::vector<std::string> musicOptions3 = {"Michael Jackson", "Elvis Presley", "Prince", "Madonna"};
     MusicQuestion musicQ3(
-        "Which album did 'Artist I' release in 2005?", 
+        "Who is known as the 'King of Pop'?", 
         "Music", 
         musicOptions3, 
         0, 
-        "Artist I", 
-        "Album 2005", 
-        "Jazz"
+        "Michael Jackson", 
+        "Thriller", 
+        "Pop"
     );
 
-    std::vector<std::string> musicOptions4 = {"Artist M", "Artist N", "Artist O", "Artist P"};
+    std::vector<std::string> musicOptions4 = {"Kendrick Lamar", "Jay-Z", "Drake", "Lil Wayne"};
     MusicQuestion musicQ4(
-        "Which genre is associated with 'Artist N'?", 
+        "Which rapper released the album 'To Pimp a Butterfly'?", 
         "Music", 
         musicOptions4, 
-        3, 
-        "Artist N", 
-        "Album Q", 
-        "Blues"
-    );
-
-    std::vector<std::string> musicOptions5 = {"Artist Q", "Artist R", "Artist S", "Artist T"};
-    MusicQuestion musicQ5(
-        "What was the top hit by 'Artist R' in 2010?", 
-        "Music", 
-        musicOptions5, 
-        1, 
-        "Artist R", 
-        "Album 2010", 
+        0, 
+        "Kendrick Lamar", 
+        "To Pimp a Butterfly", 
         "Hip-Hop"
     );
 
-    // History Questions
-    std::vector<std::string> historyOptions1 = {"Option 1", "Option 2", "Option 3", "Option 4"};
+    std::vector<std::string> musicOptions5 = {"Billie Eilish", "Ariana Grande", "Lady Gaga", "Lizzo"};
+    MusicQuestion musicQ5(
+        "Which artist released the album 'When We All Fall Asleep, Where Do We Go?'?", 
+        "Music", 
+        musicOptions5, 
+        0, 
+        "Billie Eilish", 
+        "When We All Fall Asleep, Where Do We Go?", 
+        "Pop"
+    );
+
+    // Preguntas de historia
+    std::vector<std::string> historyOptions1 = {"1776", "1492", "1865", "1914"};
     HistoryQuestion historyQ1(
-        "In which year did the event 'Event A' happen?", 
+        "In which year did the Declaration of Independence happen?", 
         "History", 
         historyOptions1, 
-        2, 
-        "Modern Era", 
-        "Event A"
+        0, 
+        "Modern History", 
+        "Declaration of Independence"
     );
 
-    std::vector<std::string> historyOptions2 = {"Option 5", "Option 6", "Option 7", "Option 8"};
+    std::vector<std::string> historyOptions2 = {"Napoleon Bonaparte", "Winston Churchill", "Julius Caesar", "Genghis Khan"};
     HistoryQuestion historyQ2(
-        "Who was the leader during 'Event B'?", 
+        "Who was the leader during the Battle of Waterloo?", 
         "History", 
         historyOptions2, 
-        1, 
-        "Ancient Period", 
-        "Event B"
+        0, 
+        "Modern History", 
+        "Battle of Waterloo"
     );
 
-    std::vector<std::string> historyOptions3 = {"Option 9", "Option 10", "Option 11", "Option 12"};
+    std::vector<std::string> historyOptions3 = {"1969", "1963", "1918", "1945"};
     HistoryQuestion historyQ3(
-        "What year did the 'Battle of C' take place?", 
+        "What year did the moon landing occur?", 
         "History", 
         historyOptions3, 
-        3, 
-        "Medieval Era", 
-        "Battle of C"
+        0, 
+        "Modern History", 
+        "Moon Landing"
     );
 
-    std::vector<std::string> historyOptions4 = {"Option 13", "Option 14", "Option 15", "Option 16"};
+    std::vector<std::string> historyOptions4 = {"The Roman Empire", "The Ottoman Empire", "The British Empire", "The Mongol Empire"};
     HistoryQuestion historyQ4(
-        "Which civilization built the 'Structure D'?", 
+        "Which empire ruled the largest contiguous land empire in history?", 
         "History", 
         historyOptions4, 
-        0, 
-        "Ancient Civilizations", 
-        "Structure D"
+        3, 
+        "Medieval History", 
+        "Mongol Empire"
     );
 
-    std::vector<std::string> historyOptions5 = {"Option 17", "Option 18", "Option 19", "Option 20"};
+    std::vector<std::string> historyOptions5 = {"The Cold War", "World War I", "World War II", "The American Revolution"};
     HistoryQuestion historyQ5(
-        "What year was 'Event E' signed?", 
+        "Which war lasted from 1939 to 1945?", 
         "History", 
         historyOptions5, 
-        1, 
+        2, 
         "Modern History", 
-        "Event E"
+        "World War II"
     );
 
-    // Create a game instance with multiple music and history questions
+    // Crear una instancia del juego con las preguntas de música e historia
     Game game(player, musicQ1, historyQ1);
     
-    // Start the game
+    // Comenzar el juego
     game.startGame();
 
-    // Music Questions
+    // Preguntas de música
     std::cout << "\nMusic Questions:\n";
     musicQ1.displayQuestion();
     int musicAnswer;
@@ -179,7 +179,7 @@ int main() {
         std::cout << "Wrong answer!\n";
     }
 
-    // History Questions
+    // Preguntas de historia
     std::cout << "\nHistory Questions:\n";
     historyQ1.displayQuestion();
     int historyAnswer;
@@ -232,8 +232,9 @@ int main() {
         std::cout << "Wrong answer!\n";
     }
 
-    // Final score
+    // Puntuación final
     std::cout << "\nGame Over! " << player.getName() << "'s final score: " << player.getScore() << std::endl;
 
     return 0;
 }
+
