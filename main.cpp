@@ -6,11 +6,11 @@
 #include "Question.h"
 
 int main() {
-    Player player("", 0);  // El jugador comienza con una puntuación de 0
+    Player player("", 0);  // The player starts with a score of 0
     int choice;
 
     while (true) {
-        // Menú cíclico
+        // Cyclic menu
         std::cout << "\nMarathon Game Menu\n";
         std::cout << "1. Start Game\n";
         std::cout << "2. View Score\n";
@@ -20,22 +20,22 @@ int main() {
 
         switch (choice) {
             case 1: {
-                // Preguntar por el nombre del jugador solo cuando inicie el juego
+                // Ask for the player's name only when starting the game
                 if (player.getName().empty()) {
                     std::string playerName;
                     std::cout << "Enter player name: ";
-                    std::cin.ignore();  // Para limpiar el buffer del cin
+                    std::cin.ignore();  // To clear the input buffer
                     std::getline(std::cin, playerName);
                     player.setName(playerName);
                 }
 
-                // Preguntas de música
+                // Music questions
                 std::vector<std::string> musicOptions1 = {"Adele", "Beyoncé", "Taylor Swift", "Ed Sheeran"};
                 MusicQuestion musicQ1(
                     "Who is the artist of the album '25'?", 
                     "Music", 
                     musicOptions1, 
-                    0,  // Respuesta correcta es la opción 1 (Adele)
+                    0,  // Correct answer is option 1 (Adele)
                     "Adele", 
                     "25", 
                     "Pop"
@@ -85,7 +85,7 @@ int main() {
                     "Pop"
                 );
 
-                // Preguntas de historia
+                // History questions
                 std::vector<std::string> historyOptions1 = {"1776", "1492", "1865", "1914"};
                 HistoryQuestion historyQ1(
                     "In which year did the Declaration of Independence happen?", 
@@ -136,13 +136,13 @@ int main() {
                     "World War II"
                 );
 
-                // Crear la instancia del juego con las preguntas
+                // Create the game instance with the questions
                 Game game(player, musicQ1, historyQ1);
                 
-                // Iniciar el juego
+                // Start the game
                 game.startGame();
 
-                // Preguntas de música
+                // Music questions
                 std::cout << "\nMusic Questions:\n";
                 musicQ1.displayQuestion();
                 int musicAnswer;
@@ -195,7 +195,7 @@ int main() {
                     std::cout << "Wrong answer!\n";
                 }
 
-                // Preguntas de historia
+                // History questions
                 std::cout << "\nHistory Questions:\n";
                 historyQ1.displayQuestion();
                 int historyAnswer;
@@ -248,18 +248,18 @@ int main() {
                     std::cout << "Wrong answer!\n";
                 }
 
-                // Puntuación final
+                // Final score
                 std::cout << "\nGame Over! " << player.getName() << "'s final score: " << player.getScore() << std::endl;
 
-                break;  // Salir del ciclo para regresar al menú después de terminar el juego
+                break;  // Exit the loop to return to the menu after finishing the game
             }
             case 2:
-                // Mostrar puntuación
+                // Show score
                 std::cout << "\n" << player.getName() << "'s current score: " << player.getScore() << std::endl;
                 break;
 
             case 3:
-                // Salir del programa
+                // Exit the program
                 std::cout << "Exiting game. Goodbye!" << std::endl;
                 return 0;
 
