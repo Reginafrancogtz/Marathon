@@ -46,6 +46,7 @@ Class: Game
 Purpose:
 
 Serves as the main controller of the game, managing the interaction between the player and the questions and ensuring the game progresses smoothly.
+
 Justification:
 
 The Game class is central to the system, coordinating all gameplay elements. It handles starting the game, presenting questions, and managing the flow between music and history categories.
