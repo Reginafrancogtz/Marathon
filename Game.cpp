@@ -8,7 +8,7 @@ Game::Game(Player player, MusicQuestion musicQuestion, HistoryQuestion historyQu
 // Inicia el juego mostrando un mensaje de bienvenida
 void Game::startGame() {
     std::cout << "Welcome, " << player.getName() << "!\nLet's begin the Marathon Game!\n";
-    displayQuestion();
+    
 }
 
 // Muestra las preguntas al jugador
