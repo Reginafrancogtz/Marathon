@@ -10,6 +10,8 @@ int main() {
     std::string playerName;
     std::cout << "Enter player name: ";
     std::getline(std::cin, playerName);
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
     
     Player player(playerName, 0);  // El jugador comienza con una puntuación de 0
 
