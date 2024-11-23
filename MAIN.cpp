@@ -9,7 +9,6 @@ int main() {
     // Crear un jugador
     std::string playerName;
     std::cout << "Enter player name: ";
-    std::cin.ignore(); 
     std::getline(std::cin, playerName);
  
 
