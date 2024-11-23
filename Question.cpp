@@ -1,60 +1,59 @@
 #include "Question.h"
 #include <iostream>
 
-// Constructor de la clase Question
+// Constructor for the Question class
 Question::Question(std::string text, std::string topic, std::vector<std::string> options, int correctAnswer)
     : text(text), topic(topic), options(options), correctAnswer(correctAnswer) {}
 
-// Retorna el texto de la pregunta
+// Returns the text of the question
 std::string Question::getText() const {
     return text;
 }
 
-// Establece el texto de la pregunta
+// Sets the text of the question
 void Question::setText(std::string text) {
     this->text = text;
 }
 
-// Retorna el tema de la pregunta
+// Returns the topic of the question
 std::string Question::getTopic() const {
     return topic;
 }
 
-// Establece el tema de la pregunta
+// Sets the topic of the question
 void Question::setTopic(std::string topic) {
     this->topic = topic;
 }
 
-// Retorna las opciones de respuesta
+// Returns the answer options
 std::vector<std::string> Question::getOptions() const {
     return options;
 }
 
-// Establece las opciones de respuesta
+// Sets the answer options
 void Question::setOptions(std::vector<std::string> options) {
     this->options = options;
 }
 
-// Retorna el índice de la respuesta correcta
+// Returns the index of the correct answer
 int Question::getCorrectAnswer() const {
     return correctAnswer;
 }
 
-// Establece el índice de la respuesta correcta
+// Sets the index of the correct answer
 void Question::setCorrectAnswer(int correctAnswer) {
     this->correctAnswer = correctAnswer;
 }
 
-// Verifica si el índice proporcionado es correcto
+// Checks if the provided index is correct
 bool Question::checkAnswer(int answerIndex) const {
     return answerIndex == correctAnswer;
 }
 
-// Muestra la pregunta y sus opciones
+// Displays the question and its options
 void Question::displayQuestion() const {
     std::cout << "Topic: " << topic << "\nQuestion: " << text << "\nOptions:\n";
     for (size_t i = 0; i < options.size(); ++i) {
         std::cout << i + 1 << ". " << options[i] << "\n";
     }
 }
-
