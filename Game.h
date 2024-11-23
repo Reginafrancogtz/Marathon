@@ -5,28 +5,28 @@
 #include "MusicQuestion.h"
 #include "HistoryQuestion.h"
 
-// Clase principal que controla el flujo del juego
+// Main class that controls the flow of the game
 class Game {
 private:
-    Player player;             
-    MusicQuestion musicQuestion; 
-    HistoryQuestion historyQuestion; 
+    Player player;              // The player of the game
+    MusicQuestion musicQuestion; // A music-related question
+    HistoryQuestion historyQuestion; // A history-related question
 
 public:
-    // Constructor que inicializa el juego con un jugador y preguntas
+    // Constructor that initializes the game with a player and questions
     Game(Player player, MusicQuestion musicQuestion, HistoryQuestion historyQuestion);
 
-    // Método para iniciar el juego
+    // Method to start the game
     void startGame();
 
-    // Método para mostrar preguntas en general
+    // Method to display questions in general
     void displayQuestion();
 
-    // Métodos para jugar preguntas específicas
+    // Methods to play specific types of questions
     void playMusicQuestion();
     void playHistoryQuestion();
 
-    // Método para establecer un nuevo jugador
+    // Method to set a new player
     void setPlayer(Player player);
 };
 
