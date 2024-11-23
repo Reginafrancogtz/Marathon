@@ -4,29 +4,39 @@
 #include <string>
 #include <vector>
 
+// Clase base que representa una pregunta genérica
 class Question {
 protected:
-    std::string text;
-    std::string topic;
-    std::vector<std::string> options;
-    int correctAnswer;
+    std::string text;                
+    std::string topic;              
+    std::vector<std::string> options; 
+    int correctAnswer;             
 
 public:
-    Question(std::string qText, std::string qTopic, std::vector<std::string> qOptions, int correctAns);
-    virtual void displayQuestion() const;
-    virtual bool checkAnswer(int answer) const;
+    // Constructor que inicializa la pregunta con sus atributos
+    Question(std::string text = "", std::string topic = "", std::vector<std::string> options = {}, int correctAnswer = -1);
 
+    // Métodos para obtener y establecer el texto de la pregunta
     std::string getText() const;
-    void setText(const std::string& newText);
+    void setText(std::string text);
 
+    // Métodos para obtener y establecer el tema de la pregunta
     std::string getTopic() const;
-    void setTopic(const std::string& newTopic);
+    void setTopic(std::string topic);
 
+    // Métodos para obtener y establecer las opciones de respuesta
     std::vector<std::string> getOptions() const;
-    void setOptions(const std::vector<std::string>& newOptions);
+    void setOptions(std::vector<std::string> options);
 
+    // Métodos para obtener y establecer la respuesta correcta
     int getCorrectAnswer() const;
-    void setCorrectAnswer(int newCorrectAnswer);
+    void setCorrectAnswer(int correctAnswer);
+
+    // Verifica si el índice de respuesta dado por el jugador es correcto
+    bool checkAnswer(int answerIndex) const;
+
+    // Muestra la pregunta y las opciones en consola
+    virtual void displayQuestion() const;
 };
 
 #endif
