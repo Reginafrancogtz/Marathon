@@ -57,6 +57,7 @@ Class: Player
 Purpose:
 
 Represents the player, storing their name and score, and allowing the game to track their progress and performance.
+
 Justification:
 
 The Player class personalizes the game by storing the player’s name and keeping track of their score. This is critical for evaluating performance and providing motivation to the player.
@@ -67,6 +68,7 @@ Class: Game
 Purpose:
 
 Serves as the main controller of the game, managing the interaction between the player and the questions and ensuring the game progresses smoothly.
+
 Justification:
 
 The Game class is central to the system, coordinating all gameplay elements. It handles starting the game, presenting questions, and managing the flow between music and history categories.
