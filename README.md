@@ -42,6 +42,7 @@ A Marathon game is not typically used for tasks that require complex, real-time 
 **CLASS DESCRIPTION:**
 
 Class: Game
+
 Purpose:
 
 Serves as the main controller of the game, managing the interaction between the player and the questions and ensuring the game progresses smoothly.
