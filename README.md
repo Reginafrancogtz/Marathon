@@ -76,6 +76,7 @@ Class: Player
 Purpose:
 
 Represents the player, storing their name and score, and allowing the game to track their progress and performance.
+
 Justification:
 
 The Player class personalizes the game by storing the player’s name and keeping track of their score. This is critical for evaluating performance and providing motivation to the player.
@@ -86,6 +87,7 @@ Class: Question (base class)
 Purpose:
 
 Provides the foundational structure for all question types, including attributes for the question text, topic, options, and the correct answer.
+
 Justification:
 
 The Question class centralizes shared logic, reducing redundancy and ensuring consistency across different question types.
@@ -96,6 +98,7 @@ Class: MusicQuestion (inherits from Question)
 Purpose:
 
 Extends Question to include music-specific details such as artist, album, and genre, enhancing the thematic scope of the game.
+
 Justification:
 
 The MusicQuestion class adds depth to the gameplay by introducing attributes and methods unique to music-related questions. This specialization makes the game more engaging and appealing to players interested in music.
@@ -106,6 +109,7 @@ Class: HistoryQuestion (inherits from Question)
 Purpose:
 
 Extends Question to include historical context through attributes like period and event, enabling questions about key moments in history.
+
 Justification:
 
 The HistoryQuestion class enriches the game’s educational value by introducing historical topics. This variety keeps the gameplay diverse and engaging.
